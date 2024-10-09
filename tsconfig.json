@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "CommonJS",
+    "outDir": "./node_modules",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "declaration": true
+  },
+  "include": ["bin/**/*", "coolify-api-client/**/*"],
+  "exclude": ["node_modules","coolify-cli.js"]
+}

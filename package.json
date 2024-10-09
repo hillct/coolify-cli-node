@@ -1,0 +1,40 @@
+{
+  "name": "coolify-cli-node",
+  "version": "1.0.0",
+  "description": "A command like client for Coolify",
+  "main": "coolify-cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "prebuild": "npx openapi-generator-cli generate -i 'https://raw.githubusercontent.com/coollabsio/documentation-coolify/refs/heads/main/openapi.yaml' -g typescript-axios -o ./coolify-api-client --skip-validate-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hillct/coolify-cli-node.git"
+  },
+  "keywords": [
+    "coolify",
+    "cli",
+    "deployment",
+    "management"
+  ],
+  "author": "Colin Hill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hillct/coolify-cli-node/issues"
+  },
+  "homepage": "https://github.com/hillct/coolify-cli-node#readme",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.14.0",
+    "@types/node": "^22.7.5",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5"
+  },
+  "bin": {
+    "coolify": "./coolify-cli.js"
+  }
+}
